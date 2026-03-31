@@ -11,6 +11,14 @@ jobs:
         with:
           python-version: "3.10"
       - name: Produce Test 1 Output
-        run: python find_lowest_number.py test_data/test1_input.txt test2_output.txt
-      - name: Compare expected and actual outputs
-        run: diff test_data/test1_expected.txt test2_output.txt
+        run: python find_lowest_number.py test_data/test1_input.txt test1_output.txt
+      - name: Verify test 1 output
+        run: diff test_data/test1_expected.txt test1_output.txt
+      - name: Produce Test 2 Output
+        run: python find_lowest_number.py test_data/test2_input.txt test2_output.txt
+      - name: Verify test 2 output
+        run: diff test_data/test2_expected.txt test2_output.txt
+      - name: Produce Test 3 Output
+        run: python find_lowest_number.py test_data/test3_input.txt test3_output.txt
+      - name: Verify test 3 output
+        run: diff test_data/test3_expected.txt test3_output.txt
