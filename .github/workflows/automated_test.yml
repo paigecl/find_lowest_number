@@ -11,7 +11,6 @@ jobs:
         with:
           python-version: "3.10"
       - name: Produce Test 1 Output
-        run: python find_lowest_number.py numbers.txt actual.txt
+        run: python find_lowest_number.py test_data/test1_input.txt test2_output.txt
       - name: Compare expected and actual outputs
-        run: diff expected.txt actual.txt
-      
+        run: diff test_data/test1_expected.txt test2_output.txt
